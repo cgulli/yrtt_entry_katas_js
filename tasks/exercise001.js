@@ -9,7 +9,16 @@ function singles(arr){
     if (arr === undefined) throw new Error("array is required");
     // Your code here!
     const noDuplicatesArray = Array.from(new Set(arr))
+
+    const noDuplicatesArraySum = noDuplicatesArray.reduce(function (accumulator, currentValue) {
+        return accumulator + currentValue
+      }, 0)
+
+    const arraySum = arr.reduce(function (accumulator, currentValue) {
+        return accumulator + currentValue
+      }, 0)
 }
+
 
 module.exports = {
     singles
