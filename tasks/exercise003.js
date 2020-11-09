@@ -27,9 +27,18 @@ function rowWeights(array){
 for(let i = 0; i< sourceArray.length; i++)
 	teams[i%2].push(sourceArray[i]);
 let [a,b] = teams;  
-  
-console.log(a);
-console.log(b);
+
+const firstTeamSum = a.reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue;
+  }, 0);
+
+  const secondTeamSum = b.reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue;
+  }, 0);
+
+  const teamWeights = [firstTeamSum, secondTeamSum]
+  return(teamWeights)
+
 }
 
 module.exports = {
