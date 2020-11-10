@@ -20,8 +20,7 @@
 // wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
 function mexicanWave(str) {
-  var result = [],
-    i;
+  let i, result = [];
 
   for (i = 0; i < str.length; i++) {
     if (str[i] === " ") continue;
